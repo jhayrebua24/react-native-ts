@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "@react-native-community",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/no-unresolved": 0,
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".ts", ".tsx"]
+      }
+    ],
+    "react/style-prop-object": 0,
+    "no-use-before-define": "off",
+    "react/jsx-props-no-spreading": 0,
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "import/extensions": 0,
+    "react/prop-types": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-object-literal-type-assertion": "off",
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
+}
